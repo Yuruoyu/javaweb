@@ -1,0 +1,5 @@
+package com.ryan.springboothello.controller;
+
+public class UserController {
+
+}

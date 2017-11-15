@@ -1,0 +1,11 @@
+package com.ryan.springboothello;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+public class HelloController2 {
+@RequestMapping("/hello3")
+	public String hello3(){
+		return "hello3";
+		
+	}
+}

@@ -1,0 +1,5 @@
+package com.ryan.springboothello.bean;
+
+public class User {
+
+}

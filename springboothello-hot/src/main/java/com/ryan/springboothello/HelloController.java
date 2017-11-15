@@ -1,0 +1,43 @@
+package com.ryan.springboothello;
+
+import java.util.Date;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+/**
+ * restcontroller等价于@controller 
+ * @author Laird
+ *
+ */
+@RestController
+public class HelloController {
+	//http://127.0.0.1:8080/hello
+	@RequestMapping("/hello")
+	public String Hello(){
+		return "Hello ";
+	}
+	
+	/*
+	 * spring boot 默认的json解析框架是jackson
+	 * 可查看springboot 的maven引入了jackson jar 包
+	 * 页面请求http://127.0.0.1:8080/demo 返回 json {"id":1,"name":"one"}
+	 */
+	@RequestMapping("/getDemo")
+	public Demo getDemo(){
+		Demo demo=new Demo();
+		demo.setId(1);
+		demo.setName("oneddddddd");
+		demo.setCreateTime(new Date());
+		demo.setRemark("不序列化不会显示");
+		return demo;
+	}
+	/*
+	 * 如果想使用fastjson 可在pom.xml 引入fastjson 依赖包
+	 * <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.15</version>
+      </dependency>
+	 */
+	
+}

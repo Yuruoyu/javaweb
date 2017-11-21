@@ -52,5 +52,14 @@ public class CatController {
 		
 		return catService.getAll();
 	}
+	/*@RequestMapping("/findByName")
+	public Cat findByName(String name) {
+		
+		return catService.findByName(name);
+	}*/
+	@RequestMapping("/selectByName")
+	public Cat selectByName(String name){
+		return catService.selectByName(name);
+	}
 	
 }

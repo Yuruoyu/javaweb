@@ -6,5 +6,6 @@ import com.ryan.springboothello.demo.bean.Cat;
 
 public interface CatRepository extends CrudRepository<Cat, Integer>
 {
+
 	
 }

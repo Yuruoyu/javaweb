@@ -21,6 +21,11 @@ public class GlobalDefaultExceptionHandler {
 	@ResponseBody
 	@ExceptionHandler
 	public String defaultExceptionHandler(HttpServletRequest req,Exception e ){
+		//是返回的String
+		//MOdelAndView --介紹模板引擎
+		//ModelAndView mv =new ModelAndView();
+		//mv.setViewName(viewName);
+		//return mv;
 		return "對不起，服務器繁忙";
 	}
 }

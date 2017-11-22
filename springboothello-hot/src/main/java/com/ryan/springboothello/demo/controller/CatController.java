@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ryan.springboothello.demo.bean.Cat;
 import com.ryan.springboothello.demo.service.CatService;
 
-@RestController
+
 /**
  * 
  * @Controller和@RestController的区别？
@@ -26,6 +26,8 @@ import com.ryan.springboothello.demo.service.CatService;
  * @author Laird
  *
  */
+
+@RestController
 @RequestMapping("/cat")
 public class CatController {
 	@Resource

@@ -11,15 +11,21 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/templates")
 public class TemplatesController {
 	@RequestMapping("/hello")
+	//map 
 	public String hello(Map<String,Object> map){
 		map.put("name","tommy" );
-		return "hello";
+		return "hello";//定位到文件hello.html
 	}
 	@RequestMapping("/hello2")
 	public ModelAndView hello2(){
 		//返回的是ModelAndView
 		ModelAndView mv=new ModelAndView("hello");
-		return mv;
+		return mv;//定位到文件hello.html
 		
+	}
+	@RequestMapping("/helloftl")
+	public String helloFtl(Map<String,Object> map){
+		map.put("name","tommy" );
+		return "helloftl";//定位到文件helloftl.ftl
 	}
 }
